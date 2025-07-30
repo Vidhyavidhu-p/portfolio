@@ -1,0 +1,401 @@
+/* ===================================
+   Root variables & global styles
+=================================== */
+:root {
+  --primary-color: #00ffd0;
+  --secondary-color: #00ff66;
+  --dark-bg: #000000;
+  --deep-bg: #5a3c3c;
+  --text-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 15px;
+  text-align: center;
+
+  display: flex;            
+  flex-direction: column;    
+  align-items: center;       
+  justify-content: center;   
+  min-height: 80vh;          
+}
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--deep-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===================================
+   Navbar
+=================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-bg);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  transition: max-height 0.3s ease;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--primary-color);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Mobile navbar dropdown */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--dark-bg);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ===================================
+   Section headings
+=================================== */
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===================================
+   About section
+=================================== */
+.about-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-photo {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text p {
+  margin-bottom: 10px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  margin-bottom: 5px;
+}
+
+.about-text ul li span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.gap {
+  height: 30px;
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ===================================
+   Interests
+=================================== */
+.interests {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.interest-item {
+  background: var(--dark-bg);
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.interest-item i {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ===================================
+   Education section
+=================================== */
+.education-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.edu-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.edu-photo {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ===================================
+   Projects section & Tabs
+=================================== */
+.project-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: var(--dark-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover, .tab-btn:focus {
+  background: var(--primary-color);
+  color: #000;
+}
+
+.project-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* ===================================
+   Skills section
+=================================== */
+.skills-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.skill-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skill-gallery img {
+  width: 100px;
+  height: 100px;
+  border-radius: 7px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.skill-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* ===================================
+   Resume section
+=================================== */
+.resume-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #000;
+  padding: 10px 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+  background: #00c4a6;
+}
+
+.resume-preview img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ===================================
+   Contact section
+=================================== */
+.contact-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.contact-card {
+  background: var(--dark-bg);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card i {
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.contact-card h3 {
+  margin: 0 0 5px;
+  color: var(--secondary-color);
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

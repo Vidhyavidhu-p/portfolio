@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - P VIDHYA</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">P VIDHYA</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="project.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main class="project-section">
+    <h2>PROJECTS_________</h2>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab(event, 'web')">WEB</button>
+      <button class="tab-btn" onclick="showTab(event, 'uiux')">UI/UX</button>
+      <button class="tab-btn" onclick="showTab(event, 'annual')">Annual Report</button>
+    </div>
+
+    <!-- WEB projects -->
+    <div class="tab-content" id="web">
+      <div class="project-item">
+        <img src="./Assets/Event.jpg" alt="College Event Management System Screenshot">
+        <p><strong>College Event Management System</strong>: Developed a website that collects and displays all upcoming college events in one place. Students from other colleges can register online and participate in any event they choose. Built using HTML, CSS, JavaScript, React.JS with a user-friendly interface and simple registration process.</p>
+      </div>
+
+      <div class="project-item">
+        <img src="./Assets/tourism.jpg" alt="Tourism Website Screenshot">
+        <p><strong>Tourism Website</strong>: Created a responsive tourism site where visitors can view places and book hotel rooms easily. Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+
+    <!-- UI/UX projects -->
+    <div class="tab-content" id="uiux" style="display: none;">
+      <h3>Banner Design</h3>
+      <div class="project-item">
+        <img src="./Assets/course banner.jpg" alt="Course Banner Design">
+        <p><strong>🛠 Tools Used:</strong> Figma</p>
+        <p><strong>✏️ Details:</strong> Created a modern course promotion banner using Figma. Used clean typography, brand colors, CTA button, and responsive layout optimized for web and mobile.</p>
+      </div>
+      
+      <div class="project-item">
+        <img src="./Assets/jewel.png" alt="One-day Offer Jewellery Banner">
+        <p><strong>🛠 Tools Used:</strong> Figma</p>
+        <p><strong>✏️ Details:</strong> Designed an elegant one-day offer banner for a jewellery brand. Focused on luxury aesthetics, gold color palette, and bold offer text to attract attention.</p>
+      </div>
+    </div>
+
+    <!-- Annual Report -->
+    <div class="tab-content" id="annual" style="display: none;">
+      <h3>Annual Report Design for NGO</h3>
+      <div class="project-gallery">
+        <img src="./Assets/first.png" alt="Annual Report Cover Page">
+        <img src="./Assets/second.png" alt="Annual Report Page 1">
+        <img src="./Assets/third.png" alt="Annual Report Page 2">
+        <img src="./Assets/fourth.png" alt="Annual Report Page 3">
+      </div>
+      <p><strong>🛠 Tools Used:</strong> Canva</p>
+      <p><strong>✏️ Details:</strong> Designed a professional annual report for our NGO including cover, activities, statistics and financial summary using modern Canva templates.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
